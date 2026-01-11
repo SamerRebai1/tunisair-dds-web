@@ -1,0 +1,153 @@
+/* === style1.css: Modern + subtle + toggle === */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('10103.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #f1f1f1;
+  transition: background 0.3s ease, color 0.3s ease;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.animated-logo {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.login-container h2 {
+  color: #b4161c;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+input:focus {
+  border-color: #b4161c;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #b4161c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a01518;
+}
+
+/* Light/Dark mode toggle button */
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.mode-toggle button {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.mode-toggle button:hover {
+  background: #333;
+  color: white;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background: #121212 url('123.jpg');
+   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #f1f1f1;
+}
+
+body.dark-mode .login-container {
+  background: rgba(20, 20, 20, 0.85);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode h2 {
+  color: #ffaaaa;
+}
+
+body.dark-mode input {
+  background: #1f1f1f;
+  border-color: #444;
+  color: #eee;
+}
+body.dark-mode p,body.dark-mode a{
+  color: white;
+}
+body.dark-mode button {
+  background-color: #ff4a4a;
+}
+
+body.dark-mode button:hover {
+  background-color: #e03030;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+}

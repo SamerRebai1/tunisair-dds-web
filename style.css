@@ -1,0 +1,222 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 50px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+.dark-mode header{
+  background-color: #1a1a1a;
+  color: white;
+}
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin: 20px;
+  padding: 30px;
+  width: 230px;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-top: 5px solid #d71920;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #fdf0f0;
+}
+
+.card a {
+  text-decoration: none;
+  color: #d71920;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: #555;
+}
+
+button.toggle-dark {
+  background: white;
+  color: #d71920;
+  border: 2px solid #d7191f00;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.toggle-dark:hover {
+  background-color: #d71920;
+  color: rgb(12, 12, 12);
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: white;
+  border-color: #ff4c4c;
+}
+
+.dark-mode .card a {
+  color: #ff9f9f;
+}
+
+.dark-mode footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+}
+.login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .login-container h2 {
+      color: #d71920;
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #d71920;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #b4161c;
+    }
+    .nav-section {
+  background-color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-section a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #d71920;
+  transition: color 0.2s ease;
+}
+
+.nav-section a:hover {
+  color: #a01518;
+}
+
+.info-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  line-height: 1.6;
+}
+
+.info-section h2 {
+  color: #d71920;
+  margin-bottom: 15px;
+}
+.dark-mode .info-section{
+  background-color: #1a1a1a;
+}
+.dark-mode .nav-section{
+  background-color: #1a1a1a;
+}
+.styled-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.styled-table thead {
+  background-color: #d71920;
+  color: rgb(9, 9, 9);
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tr:hover {
+  background-color: #f4f0f0;
+}
+
+
+ .dropdown-menu a {
+  display: block;
+  margin-top: 6px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+ .dropdown-menu a:hover {
+  color: #f5f1f1;
+}
+
+

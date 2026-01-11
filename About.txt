@@ -1,0 +1,15 @@
+Admin    123abcD    "Admin"
+ali      tunisAir123  "viewer"
+ali abdi tunisAir123   "Technician"
+
+
+
+to run this locally ,you can use XAMPP ,but it didn't work for me so I installed php and accesed via command prompt 
+"cd C://project_dossier" then
+"php -s localhost:8000"
+
+
+Also, I  didn't use phpMyAdmin ,I used SQLTools ext in VSCode ,
+password to connect to DB is according to your MySQL configurator,
+
+also change the password according to you in "db.php" file in the dossier

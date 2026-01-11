@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📊 DDS Reports - Tunisair</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style_defect.css">
+  <link rel="stylesheet" href="darkmode.css">
+  <link rel = "icon" type = "image/png" href = "tunisairlogo.png">
+  <style>
+    body.dark-mode{
+      background-color: #121212;
+    }
+    .charts-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    canvas {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    body.dark-mode a{
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div><button onclick="toggleDarkMode()" class="dm" style="margin-top:50px;float:right;">🌓</button></div>
+  <div class="charts-container">
+    <h2>📈 Defect Analytics</h2>
+    
+    <canvas id="defectsByAircraft"></canvas>
+    <canvas id="openClosedChart"></canvas>
+    <h2>⚠️ Limitations Analytics</h2>
+    
+    <canvas id="limitationsByAircraft"></canvas>
+    <a href="index.php" style="text-decoration:none; margin-left:15px;">⬅️ Dashboard</a>
+  </div>
+  
+  <script>
+    fetch('API/get_charts_data.php')
+      .then(res => res.json())
+      .then(data => {
+        const ctx1 = document.getElementById('defectsByAircraft').getContext('2d');
+        new Chart(ctx1, {
+          type: 'bar',
+          data: {
+            labels: data.defects_by_aircraft.labels,
+            datasets: [{
+              label: 'Total Defects',
+              data: data.defects_by_aircraft.counts,
+              backgroundColor: 'crimson'
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              title: {
+                display: true,
+                text: 'Defects by Aircraft'
+              }
+            }
+          }
+        });
+
+        const ctx2 = document.getElementById('openClosedChart').getContext('2d');
+        new Chart(ctx2, {
+          type: 'doughnut',
+          data: {
+            labels: ['Open', 'Closed'],
+            datasets: [{
+              data: [data.open_closed.open, data.open_closed.closed],
+              backgroundColor: ['#dc3545', '#28a745']
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              title: {
+                display: true,
+                text: 'Open vs Closed Defects'
+              }
+            }
+          }
+        });
+      
+      const ctx3 = document.getElementById('limitationsByAircraft').getContext('2d');
+      new Chart(ctx3, {
+        type: 'bar',
+        data: {
+          labels: data.limitations_by_aircraft.labels,
+          datasets: [{
+            label: 'Total Limitations',
+            data: data.limitations_by_aircraft.counts,
+            backgroundColor: '#ffc107'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: 'Limitations by Aircraft'
+            }
+          }
+        }
+      });
+    })
+      .catch(err => console.error("Error loading charts:", err));
+      function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+  }
+
+  window.onload = function () {
+    if (localStorage.getItem("darkMode") === "true") {
+      document.body.classList.add("dark-mode");
+    }
+  };
+  </script>
+</body>
+</html>

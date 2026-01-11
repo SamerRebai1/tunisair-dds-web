@@ -1,0 +1,11 @@
+{
+    "name": "rebai/internshipproject",
+    "autoload": {
+        "psr-4": {
+            "Rebai\\Internshipproject\\": "src/"
+        }
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^4.4"
+    }
+}
