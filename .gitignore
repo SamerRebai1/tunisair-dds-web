@@ -4,6 +4,7 @@ Thumbs.db
 .vscode/
 .idea/
 
+/vendor/
 .env
 config.php
 
