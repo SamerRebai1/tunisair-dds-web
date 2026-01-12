@@ -1,31 +1,6 @@
-# ✈️ DDS – Defect & Deviation System
+✈️ DDS Web Application – Defect & Deferment System
+📌 Project Overview
 
-## 📌 Description
-DDS (Defect & Deviation System) is a web-based application developed during an internship at Tunisair.
-It allows technicians and administrators to manage aircraft defects and operational limitations efficiently.
+The DDS Web Application (Defect & Deferment System) is a web-based platform developed during my internship to manage aircraft defects and operational limitations in a structured, secure, and efficient way.
 
-## 🎯 Features
-- Secure authentication (Admin / Technician / Viewer)
-- Defect & limitation management (CRUD)
-- Role-based access control
-- Audit logging
-- Search, filter, and sorting
-- Excel & PDF export
-- Profile management
-- Password reset system
-
-## 🛠 Technologies Used
-- PHP (Procedural)
-- MySQL
-- HTML5 / CSS3 / JavaScript
-- Bootstrap
-- PhpSpreadsheet (Excel export)
-- TCPDF / FPDF (PDF export)
-
-## 🔐 Security
-- SQL Injection protection using prepared statements
-- Password hashing
-- Session-based authentication
-- Role-based authorization
-
-## 🗂 Project Structure
+The application centralizes defect tracking, limitation management, audit logging, and data export, replacing manual or spreadsheet-based processes with a modern web solution.
